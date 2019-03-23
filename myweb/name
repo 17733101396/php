@@ -1,0 +1,22 @@
+Psy Shell v0.7.2 (PHP 5.5.9-1ubuntu4.19 — cli) by Justin Hileman
+>>> PHP warning:  Creating default object from empty value on line 1
+>>> => "password"
+>>> 
+                                                           
+  [Symfony\Component\Debug\Exception\FatalErrorException]  
+  Call to undefined method stdClass::save()                
+                                                           
+
+>>> 
+                                                           
+  [Symfony\Component\Debug\Exception\FatalErrorException]  
+  Call to undefined method stdClass::save()                
+                                                           
+
+>>> 
+                                                           
+  [Symfony\Component\Debug\Exception\FatalErrorException]  
+  Call to undefined method stdClass::save()                
+                                                           
+
+>>> 
