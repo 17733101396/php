@@ -75,6 +75,9 @@ class ArticlesController extends Controller
     public function edit($id)
     {
         //
+        $article = Article::findOrFail($id);
+        return view('articles.edit', compact('article'));
+
     }
 
     /**
@@ -87,6 +90,18 @@ class ArticlesController extends Controller
     public function update(Request $request, $id)
     {
         //
+         $this->validate($request, [
+            'title' => 'required|max:50',
+        ]);
+
+        $article = Article::findOrFail($id);
+        $article->update([
+            'title' => $request->title,
+            'content' => $request->content,
+        ]);
+
+        //return back();
+        return redirect()->route('articles.index');
     }
 
     /**
@@ -98,5 +113,9 @@ class ArticlesController extends Controller
     public function destroy($id)
     {
         //
+         $article = Article::findOrFail($id);
+        $article->delete();
+        //return back();
+        return redirect()->route('articles.index');
     }
 }
